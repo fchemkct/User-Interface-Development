@@ -1,20 +1,6 @@
-/* General page style */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
-  /* Header section */
-  h1, h2 {
-    color: #222;
-    text-align: center;
-  }
-  
   /* Navigation */
   /* Navbar styles */
-.navbar {
+  .navbar {
     background-color: rgba(191, 230, 118, 1);
     padding: 1em 0;
   }
@@ -58,15 +44,3 @@ body {
     text-decoration: underline;
     color: red;
   }
-
-  
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: black;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 3em;
-  }
-  

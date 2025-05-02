@@ -1,0 +1,27 @@
+/*   SPLIT THIS CSS PAGE INTO COLORS, LAYOUTS, FONTS, ETC*/
+
+/* General page style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Header section */
+  h1, h2 {
+    color: #222;
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+.img {
+    width: 500px;
+    height: 500px;
+    margin: block;
+    margin-left: auto;
+    margin-right: auto;
+}
