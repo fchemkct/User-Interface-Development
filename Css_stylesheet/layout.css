@@ -1,0 +1,24 @@
+/*   SPLIT THIS CSS PAGE INTO COLORS, LAYOUTS, FONTS, ETC*/
+
+/* General page style */
+.split-display {
+  display: flex;
+  min-height: 500px;
+
+}
+.split-right {
+  flex: 1;
+  background-color: #f8eac9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  text-align: center;
+
+}
+
+.split-left {
+  flex: 1;
+  background-color: #fff;
+}
