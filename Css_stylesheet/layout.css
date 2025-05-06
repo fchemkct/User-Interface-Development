@@ -4,6 +4,7 @@
 .split-display {
   display: flex;
   min-height: 500px;
+  
 
 }
 .split-right {
@@ -15,10 +16,16 @@
   align-items: center;
   padding: 2em;
   text-align: center;
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
 
 }
 
 .split-left {
   flex: 1;
-  background-color: #fff;
 }
