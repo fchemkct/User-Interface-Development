@@ -1,30 +1,10 @@
 /*   SPLIT THIS CSS PAGE INTO COLORS, LAYOUTS, FONTS, ETC*/
 
 /* General page style */
-@font-face {
-  font-family: Inter, RunWild, Jeju, Segoe;
-  src: url(../fonts/Inter_18pt-Regular.ttf),
-        url(../fonts/Run\ Wild\ -\ Demo.ttf),
-        url(../fonts/JejuMyeongjo-Regular.ttf),
-        url(../fonts/segoescript.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
 
-head {
-  font-family: Segoe;
-}
-  a {
-    font-family: Segoe;
-  }
-  
-  li a {
-    font-family: Segoe;
-  }
 
 body {
     margin:auto;
-    font-family: Inter;
     background-color: #f2f2f2;
     color: #000000;
   }
