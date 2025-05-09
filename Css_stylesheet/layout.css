@@ -18,14 +18,55 @@
   text-align: center;
   h1 {
     font-size: 3em;
+    font-style:normal;
   }
 
   p {
     font-size: 2em;
+    padding-top: 0.5em;
+    padding-left: 3em;
+    padding-right: 3em;
   }
 
 }
 
 .split-left {
   flex: 1;
+}
+
+
+.sample_product {
+  display: flex;
+  min-height: 300px;
+  background-color: #f8eac9;
+  padding: 5em;
+  p {
+    font-size: 2em;
+    padding-top: 0.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  
+
+}
+.split-right2 {
+  flex: 1;
+  padding: 4em;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 10em;
+  height: 20em;
+}
+
+.split-left2 {
+  flex: 1;
+  padding: 4em;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 10em;
+  height: 20em;
 }

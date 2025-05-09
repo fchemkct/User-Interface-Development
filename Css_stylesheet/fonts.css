@@ -8,6 +8,7 @@
   @font-face {
     font-family: RunWild;
     src: url(../fonts/Run\ Wild\ -\ Demo.ttf);
+    font-style:normal;
   }
   
   @font-face {
@@ -38,7 +39,6 @@
     font-family: Segoe;
     color: black;
     text-decoration: none;
-    font-weight: 500;
   }
   
   li a:hover {
