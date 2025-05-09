@@ -1,0 +1,38 @@
+  /* Header section */
+
+  @font-face {
+    font-family: Inter, RunWild, Jeju, Segoe;
+    src: url(../fonts/Inter_18pt-Regular.ttf),
+          url(../fonts/Run\ Wild\ -\ Demo.ttf),
+          url(../fonts/JejuMyeongjo-Regular.ttf),
+          url(../fonts/segoescript.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  h1, h2 {
+    font-family: RunWild;
+    color: #000000;
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  p {
+    font-family: Inter;
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  li a {
+    font-family: Segoe;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  li a:hover {
+    text-decoration: underline;
+    color: red;
+  }
+
+  

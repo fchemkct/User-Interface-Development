@@ -28,17 +28,3 @@ body {
     background-color: #f2f2f2;
     color: #000000;
   }
-  
-  /* Header section */
-  h1, h2 {
-    font-family: RunWild;
-    color: #000000;
-    text-align: center;
-    font-size: 3em;
-  }
-  
-  p {
-    font-family: Inter;
-    text-align: center;
-    font-size: 1.1em;
-  }

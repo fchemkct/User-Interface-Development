@@ -1,16 +1,6 @@
   /* Navigation */
   /* Navbar styles */
 
-@font-face {
-  font-family: Inter, RunWild, Jeju, Segoe;
-  src: url(../fonts/Inter_18pt-Regular.ttf),
-        url(../fonts/Run\ Wild\ -\ Demo.ttf),
-        url(../fonts/JejuMyeongjo-Regular.ttf),
-        url(../fonts/segoescript.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
 .navbar {
   background-color: rgba(191, 230, 118, 1);
   padding: 1em 0;
@@ -34,6 +24,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0 1em 1em ;
+    font-family: RunWild;
   }
   
   .nav-links {
@@ -42,17 +33,5 @@
     gap: 3em;
     margin: 0;
     padding: 0;
-  }
-  
-  .nav-links li a {
-    font-family: Segoe;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .nav-links li a:hover {
-    text-decoration: underline;
-    color: red;
   }
 
