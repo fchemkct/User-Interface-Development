@@ -1,0 +1,29 @@
+.option_dropdown,
+.product-details > div select {
+  width: 200px;
+}
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #c8e775;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: left;
+}
+
+option {
+  text-align: center;
+}
+
+.add-to-cart {
+  background-color: #c8e775;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
