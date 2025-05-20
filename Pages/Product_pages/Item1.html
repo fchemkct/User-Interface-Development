@@ -38,32 +38,34 @@
         <div class="split-sample">
             <div class="product-details">
                 <h2>Midnight Delight <br> $20</h2>
-
+              
                 <div class="quantity-selector">
                     <button class="qty-btn">-</button>
                     <div>1</div>
                     <button class="qty-btn">+</button>
                 </div>
-            
-        
+                <script src="/Css_stylesheet/testjs.js"></script>
                 <div class="option_dropdown">
-                    <div>
-                        <label>Size</label><br>
-                        <select>
-                            <option>200g</option>
-                        </select>
-                    </div>
-            
-                    <div>
-                        <label>Grind</label><br>
-                        <select>
-                            <option>Whole Beans</option>
-                        </select>
-                    </div>
+                    <label onclick="toggleDropdown()">Size</label>
+                    <select id="dropdownOptions">
+                        <option>200g</option>
+                        <option>1kg</option>
+                    </select>
                 </div>
-        
+              
+                <div class="option_dropdown">
+                    <label>Grind</label>
+                    <select>
+                        <option>Whole Beans</option>
+                        <option>Espresso</option>
+                        <option>French Press</option>
+                        <option>V60</option>
+                        <option>Filter</option>
+                    </select>
+                </div>
+              
                 <button class="add-to-cart">Add to cart</button>
-            </div>
+              </div>
         </div>
     </div>
 
