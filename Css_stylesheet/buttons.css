@@ -28,3 +28,12 @@
     border-right: 4px solid #000;
   }
   
+.add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  background-color: #c8e775;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: bold;
+}
