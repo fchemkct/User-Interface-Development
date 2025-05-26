@@ -1,0 +1,35 @@
+
+.split-block {
+    background-color: #f8eac9;  
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 5em;
+    flex-wrap: wrap;
+
+}
+.block-side {
+    flex: 1;
+    flex-direction: column;
+    display:flex;
+}
+
+.block_1 {
+  background-color: #b7e47b;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.block_2 {
+  background-color: #b7e47b;
+  padding: 2em;
+  border-radius: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
