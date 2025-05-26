@@ -4,7 +4,7 @@
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    padding: 5em;
+    padding: 2em;
     flex-wrap: wrap;
 
 }
@@ -16,8 +16,10 @@
 
 .block_1 {
   background-color: #b7e47b;
-  padding: 30px;
+  padding-left: 3em;
+  padding-right: 3em;
   border-radius: 30px;
+  width: 25em;
   max-width: 800px;
   margin: 20px auto;
   font-size: 18px;
@@ -26,7 +28,8 @@
 
 .block_2 {
   background-color: #b7e47b;
-  padding: 2em;
+  padding: 30px;
+  width: 25em;
   border-radius: 30px;
   max-width: 800px;
   margin: 20px auto;
