@@ -5,6 +5,7 @@
     align-items: flex-start;
     gap: 40px;
     padding: 2em;
+    padding-bottom: 10em;
     flex-wrap: wrap;
 
 }
