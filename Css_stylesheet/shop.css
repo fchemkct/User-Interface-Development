@@ -1,0 +1,48 @@
+header .top-bar {
+  background-color: #c8e775;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner {
+  background-color: #cfd9ff;
+  padding: 10px;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.category-title {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.product {
+  width: 140px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product span {
+  font-size: 13px;
+}
+
