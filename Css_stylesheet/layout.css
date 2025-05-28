@@ -88,3 +88,22 @@
   overflow: hidden;
   font-size: 20px;
 }
+
+/* shop page */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.product {
+    width: 300px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}

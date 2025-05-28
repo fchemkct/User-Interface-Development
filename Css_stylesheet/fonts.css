@@ -64,3 +64,24 @@
     padding: 2em;
 
   }
+
+/* for shop page */
+.shop-category-title {
+  font-family: RunWild;
+  font-size: 40px;
+  margin-top: 40px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.product a {
+    font-family: Segoe;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+  
+.product a:hover {
+    text-decoration: underline;
+    color: red;
+}
