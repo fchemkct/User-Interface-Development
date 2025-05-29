@@ -65,6 +65,16 @@
 
   }
 
+/* banners */
+.banner {
+  background-color: #cfd9ff;
+  text-align: center;
+  padding: 3vh 4vh 5vh;
+  font-size: 20px;
+  font-family: RunWild;
+}
+
+
 /* for shop page */
 .shop-category-title {
   font-family: RunWild;
@@ -84,4 +94,10 @@
 .product a:hover {
     text-decoration: underline;
     color: red;
+}
+
+/* cart page */
+.desc p {
+  margin: 0;
+  text-align: left;
 }

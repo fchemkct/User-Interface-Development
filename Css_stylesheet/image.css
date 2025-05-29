@@ -13,6 +13,19 @@
     max-height: 80%;
 }
 
+/* product page */
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* cart page */
+.item-details img {
+    width: 20%;
+    height: auto;
+
+}
 
 
 
