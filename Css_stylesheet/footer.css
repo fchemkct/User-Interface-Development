@@ -1,21 +1,40 @@
-  /* Footer */
-footer {
-  background-color: #cfd9ff;
-  padding: 30px 0;
+/* footer */
+.footer {
+  background-color: #d3dcff;
+  padding: 40px 20px;
+  font-family: cursive;
+  text-align: center;
+}
+
+.footer-signup {
+  margin-bottom: 30px;
 }
 
 .signup-btn {
   background-color: #adbffd;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 999px;
+  font-family: Segoe;
   font-size: 16px;
   cursor: pointer;
-  margin-bottom: 20px;
 }
 
 .footer-links {
   display: flex;
-  justify-content: space-around;
-  font-size: 14px;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links p {
+  font-family: Segoe;
+  font-size: 16px;
 }

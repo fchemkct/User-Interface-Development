@@ -1,0 +1,59 @@
+.confirmation-section {
+  display: flex;
+  padding-bottom: 5%;
+
+}
+
+.order-details {
+  flex: 1;
+  padding: 5%;
+}
+
+.summary {
+  flex: 1;
+  padding: 5%;
+}
+
+.summary {
+  background-color: #c8e775;
+}
+
+.order-details h2,
+.summary h2 {
+  margin-bottom: 10px;
+}
+
+.block-separator {
+    height: 10vh;
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 3px 0;
+}
+
+.row,
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.thank-you {
+    background-color: #c8e775;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    gap: 400px;
+}
+
+
+
+

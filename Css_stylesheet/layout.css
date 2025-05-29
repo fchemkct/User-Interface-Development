@@ -9,7 +9,7 @@
 }
 .split-right {
   flex: 1;
-  background-color: #f8eac9;
+  background-color: #FFECC9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@
 .sample-product {
   display: flex;
   min-height: 300px;
-  background-color: #f8eac9;
+  background-color: #FFECC9;
   padding: 5em;  
 
 }
