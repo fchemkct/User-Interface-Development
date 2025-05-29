@@ -96,6 +96,11 @@
     color: red;
 }
 
+/* product page */
+.block_1 p {
+  text-align: left;
+}
+
 /* cart page */
 .desc p {
   margin: 0;
