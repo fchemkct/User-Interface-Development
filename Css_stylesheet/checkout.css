@@ -1,0 +1,158 @@
+
+.checkout-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(250vh - 120px); /* adjust for header height */
+}
+
+/* LEFT FORM COLUMN */
+.checkout-left {
+  flex: 1;
+  padding: 20px 40px;
+
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background-color: #c8e775;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: cursive;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
+.discount-row {
+  display: flex;
+  gap: 10px;
+}
+
+.discount-row input {
+  flex: 1;
+}
+
+.discount-row button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #cfd9ff;
+  cursor: pointer;
+}
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pay-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.paypal {
+  background-color: #fcd167;
+}
+
+.shop {
+  background-color: #6e39f8;
+  color: white;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.or-line {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* RIGHT SUMMARY COLUMN */
+.checkout-right {
+  width: 400px;
+  background-color: #cfd9ff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sticky-summary {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.summary-title {
+  text-align: center;
+  font-style: italic;
+  border-bottom: 3px solid #c8e775;
+  padding-bottom: 5px;
+}
+
+.scrollable-orders {
+  flex: 1;
+  overflow-y: auto;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.summary-item img {
+  width: 50px;
+  height: auto;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.checkout-btn {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: center;
+}
