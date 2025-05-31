@@ -3,16 +3,24 @@
 .navbar {
   background-color: rgba(191, 230, 118, 1);
   padding: 1em 0;
+
+}
+  .nav-top {
+    padding: 1em 0;
     position: sticky;
     top: 0;
-}
+    display: flex;
+    justify-content: space-between;
+  }
   
-  .nav-container {
+  .nav-down {
     max-width: 1000px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    top: 0;
   }
   
   .logo {
@@ -24,16 +32,21 @@
     justify-content: space-evenly;
     align-items: center;
     font-family: Jeju;
-    padding: 1em 0;
-    position: sticky;
-    top: 0;
+    height: 50%;
+  }
+
+  .logo img {
+    height: 5vh;
+  }
+
+  .icon img {
+    padding: 0em 1em;
+    height: 3vh;
   }
   
   .nav-links {
     list-style: none;
     display: flex;
     gap: 3em;
-     position: relative;
-    top:0;
   }
 
