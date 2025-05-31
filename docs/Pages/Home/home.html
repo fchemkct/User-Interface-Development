@@ -16,13 +16,14 @@
     <link rel="stylesheet" href = "../../Css_stylesheet/buttons.css">
     <link rel="stylesheet" href = "../../Css_stylesheet/Dropdowns.css">
     <link rel="stylesheet" href = "../../Css_stylesheet/blocks.css">
+    <link rel="stylesheet" href = "../../Css_stylesheet/search_popup.css">
 </head>
 
 <body class="body">
     <nav class="navbar">
         <div class="nav-top">
-            <div class="icon">
-                <a href="../Popup/search_popup.html"><img src="../../Images/Navbar/Icon.png"></a>
+            <div class="icon" id="openPopupBtn">
+                <a><img src="../../Images/Navbar/Icon.png"></a>
             </div>
             <div class="logo">
                 <img src="../../Images/Navbar/logo.png" class="logo-img">
@@ -43,6 +44,25 @@
             </ul>
         </div>
     </nav>
+
+          <!-- Trigger Button -->
+  <!-- <button id="openPopupBtn">Open Menu</button> -->
+
+  <!-- Overlay Popup -->
+    <div id="popupOverlay" class="search-overlay">
+        <div class="search-popup" onclick="event.stopPropagation()">
+            <input type="text" placeholder="🔍" class="search-bar" />
+            <nav class="popup-links">
+                <a href="../Home/home.html">Home</a>
+                <a href="../Products_list/shop.html">Shop</a>
+                <a href="#">About us</a>
+                <a href="../Subscription/subscription.html">Subscription</a>
+            </nav>
+        </div>
+    </div>
+
+    
+
 
     <div  class = "split-display">
         <div class = "split-left">
@@ -118,5 +138,7 @@
         </div>
     </footer>
     
+    <!-- javascript scripts -->
+    <script src="../../Javascript/search_popup.js"></script>
 </body>
 </html>
