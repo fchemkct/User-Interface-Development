@@ -48,3 +48,15 @@ button {
   text-decoration: none;
   font-size: 24px;
 }
+
+.search-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fdf0cc;
+  font-family: cursive;
+  font-size: 18px;
+  display: none; /* Hidden initially */
+  cursor: pointer;
+}

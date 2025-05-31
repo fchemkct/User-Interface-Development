@@ -2,12 +2,23 @@
 const popup = document.getElementById("popupOverlay");
 const openBtn = document.getElementById("openPopupBtn");
 
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+
 openBtn.onclick = () => {
-  popup.style.display = "flex";
-  console.log("button open: " + popup.style.display);
+    popup.style.display = "flex";
 };
 
 popup.onclick = () => {
-  popup.style.display = "none";
-  console.log("button closed: " + popup.style.display);
+    searchInput.value = "";
+    popup.style.display = "none";
+    searchBtn.style.display = "none";
 };
+
+searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchBtn.style.display = "inline-block";
+    }
+});

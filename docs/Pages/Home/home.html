@@ -51,18 +51,24 @@
   <!-- Overlay Popup -->
     <div id="popupOverlay" class="search-overlay">
         <div class="search-popup" onclick="event.stopPropagation()">
-            <input type="text" placeholder="🔍" class="search-bar" />
+            <input 
+                id="searchInput" 
+                type="text" 
+                placeholder = "🔍" 
+                value = "" 
+                class="search-bar"
+            >
             <nav class="popup-links">
                 <a href="../Home/home.html">Home</a>
                 <a href="../Products_list/shop.html">Shop</a>
                 <a href="#">About us</a>
                 <a href="../Subscription/subscription.html">Subscription</a>
             </nav>
+            <button id="searchBtn" class="search-btn">Search</button>
         </div>
-    </div>
+    </div>    
 
-    
-
+    <!-- main content -->
 
     <div  class = "split-display">
         <div class = "split-left">
