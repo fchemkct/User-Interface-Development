@@ -13,12 +13,12 @@ openBtn.onclick = () => {
 popup.onclick = () => {
     searchInput.value = "";
     popup.style.display = "none";
-    searchBtn.style.display = "none";
+    searchBtn.style.visibility = "hidden";
 };
 
 searchInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        searchBtn.style.display = "inline-block";
+        searchBtn.style.visibility = "visible";
     }
 });

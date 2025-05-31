@@ -44,9 +44,10 @@ button {
 }
 
 .popup-links a {
-  color: black;
-  text-decoration: none;
-  font-size: 24px;
+    font-family: Segoe;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 .search-btn {
@@ -57,6 +58,7 @@ button {
   background-color: #fdf0cc;
   font-family: cursive;
   font-size: 18px;
-  display: none; /* Hidden initially */
+  display: inline-block; /* Hidden initially */
+  visibility:hidden;
   cursor: pointer;
 }
