@@ -5,10 +5,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const search_input = localStorage.getItem("search_input");
-    console.log("search input is: " + search_input);
+    const products = document.querySelectorAll("div.product");
+    const resultContainer = document.getElementById("product-grid");
+    resultContainer.innerHTML = "";
 
-    const products = document.querySelectorAll("div.database-item");
-    console.log("product list is: " + products);
+    let search_matches = [];
 
     if (!search_input)
     {
@@ -22,12 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
     products.forEach(product => 
     {
         const text = product.querySelector("a").textContent.toLowerCase();
-        if (text.includes(lowerQuery)) {
-            product.style.display = "block"; // show matching product
-            console.log("showing item: " + text);
-        } else {
-            product.style.display = "none"; // hide non-matching
-            console.log("hiding item: " + text);
-        }
+
+        // clone matches to template grid
+        if (text.includes(lowerQuery)) 
+        {
+            search_matches.push(product.cloneNode(true));
+        } 
     });
+
+    // if no searches matched
+    if (search_matches.length == 0)
+    {
+        resultContainer.innerHTML = `<p style="text-align:center; font-family:cursive;">No results found for "${search_input}"</p>`
+    }
+        
+    // Insert results in groups of 4 per grid
+    for (let i = 0; i < search_matches.length; i += 4) {
+        const grid = document.createElement("div");
+        grid.classList.add("product-grid");
+
+        search_matches.slice(i, i + 4).forEach(p => grid.appendChild(p));
+        resultContainer.appendChild(grid);
+    }
 });
