@@ -23,7 +23,7 @@
     <nav class="navbar">
         <div class="nav-top">
             <div class="icon" id="openPopupBtn">
-                <a><img src="../../Images/Navbar/Icon.png"></a>
+                <a href="#"><img src="../../Images/Navbar/Icon.png"></a>
             </div>
             <div class="logo">
                 <img src="../../Images/Navbar/logo.png" class="logo-img">
@@ -51,18 +51,30 @@
   <!-- Overlay Popup -->
     <div id="popupOverlay" class="search-overlay">
         <div class="search-popup" onclick="event.stopPropagation()">
-            <input 
-                id="searchInput" 
-                type="text" 
-                placeholder = "🔍" 
-                value = "" 
-                class="search-bar"
-            >
+            <div class="search-bar">
+                <img class="search-icon-bar" src="../../Images/Navbar/Icon.png">
+                <input 
+                    id="searchInput" 
+                    type="text" 
+                    placeholder = "" 
+                    value = "" 
+                    class="search-input"
+                >
+            </div>
             <nav class="popup-links">
-                <a href="../Home/home.html">Home</a>
-                <a href="../Products_list/shop.html">Shop</a>
-                <a href="#">About us</a>
-                <a href="../Subscription/subscription.html">Subscription</a>
+                <div class = "search-nav">
+                    <a href="../Home/home.html">Home</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="../Products_list/shop.html">Shop</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="#">About us</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="../Subscription/subscription.html">Subscription</a>
+                </div>
+            
             </nav>
             <button id="searchBtn" class="search-btn">
                 <a href="../Search_for_products/search_results.html">Search</a>

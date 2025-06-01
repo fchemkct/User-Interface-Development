@@ -51,8 +51,8 @@
   }
   
   li a:hover {
-    text-decoration: underline;
-    color: red;
+    text-decoration: none;
+    color: rgb(135, 134, 134);
   }
 
   .title {

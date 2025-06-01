@@ -1,3 +1,18 @@
 .search-database {
-    display: none;
+    visibility: hidden;
+    max-height: 15vh;
+}
+
+.search-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 30px;
+    padding: 20px;
+}
+
+.search-result-count {
+    font-family: Inter;
+    font-size: 1.1em;
+    margin-top: 4em;
 }

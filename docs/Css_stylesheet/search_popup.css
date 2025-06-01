@@ -31,10 +31,21 @@ button {
   padding: 12px 20px;
   border-radius: 30px;
   margin-bottom: 20px;
-  font-size: 18px;
   background-color: #fdf0cc;
-  font-family: cursive;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
+
+.search-input {
+  width: 95%;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: underline;
+  font-size: 20px;
+}
+
 
 .popup-links {
   display: flex;
@@ -50,15 +61,42 @@ button {
     font-size: 24px;
 }
 
+.search-icon-bar {
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* don't block input clicks */
+}
+
+
+.search-nav:hover {
+  padding: auto;
+  width: 60vh;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(107, 164, 0, 0.4);
+}
+
 .search-btn {
   margin-top: 20px;
   padding: 10px 30px;
   border: none;
   border-radius: 20px;
   background-color: #fdf0cc;
-  font-family: cursive;
+  color:black;
+  font-family: Segoe;
   font-size: 18px;
   display: inline-block; /* Hidden initially */
   visibility:hidden;
   cursor: pointer;
+}
+
+.search-btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.search-btn:hover {
+  background-color:rgba(161, 127, 65, 0.7);
+  color: black;
 }
