@@ -74,6 +74,19 @@
   font-family: RunWild;
 }
 
+/* search popup */
+.search-btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.popup-links a {
+    font-family: Segoe;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}
+
 
 /* for shop page */
 .shop-category-title {
@@ -106,3 +119,12 @@
   margin: 0;
   text-align: left;
 }
+
+/* search results page */
+.search-result-count {
+  font-family: Inter;
+  font-size: 1.1em;
+  margin-top: 4em;
+}
+
+/*  */

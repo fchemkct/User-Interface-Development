@@ -77,3 +77,25 @@
     background-color: white;
     color: black;
 }
+
+/* search popup */
+.search-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fdf0cc;
+  color:black;
+  font-family: Segoe;
+  font-size: 18px;
+  display: inline-block; /* Hidden initially */
+  visibility:hidden;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color:rgba(161, 127, 65, 0.7);
+  color: black;
+}
+
+/*  */

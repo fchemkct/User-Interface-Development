@@ -1,5 +1,6 @@
   /* Navigation */
 
+/* main navbar */
 .navbar {
   background-color: rgba(191, 230, 118, 1);
   padding: 1em 0;
@@ -50,3 +51,11 @@
     gap: 3em;
   }
 
+/* search popup nav */
+.search-nav:hover {
+  padding: auto;
+  width: 60vh;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(107, 164, 0, 0.4);
+}
