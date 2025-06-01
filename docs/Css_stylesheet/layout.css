@@ -226,3 +226,43 @@ hr {
   gap: 10px;
   text-align: center;
 }
+
+/* payment confirmation page */
+.confirmation-section {
+  display: flex;
+  padding-bottom: 5%;
+
+}
+
+.order-details {
+  flex: 1;
+  padding: 5%;
+}
+
+.summary {
+  flex: 1;
+  padding: 5%;
+  background-color: #c8e775;
+}
+
+.order-details h2,
+.summary h2 {
+  margin-bottom: 10px;
+}
+
+.row,
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.thank-you {
+    background-color: #c8e775;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    gap: 400px;
+}

@@ -1,0 +1,10 @@
+/* payment confirmation */
+.block-separator {
+    height: 10vh;
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 3px 0;
+}
