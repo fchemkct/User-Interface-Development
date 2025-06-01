@@ -1,0 +1,7 @@
+.search-database {
+    display: block;
+}
+
+.database-item {
+  display: none; /* hide all by default */
+}
