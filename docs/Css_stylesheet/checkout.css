@@ -14,6 +14,7 @@
 
 .form-section {
   margin-bottom: 40px;
+
 }
 
 .form-section h2 {
@@ -34,7 +35,27 @@ input, select {
   border-radius: 10px;
   border: none;
   background-color: #cfd9ff;
-  font-family: cursive;
+  font-family: Inter;
+}
+
+/* for card numbers */
+.card-number {
+  padding: 0 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: Inter;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-number img {
+  align-self: center;
+  padding-left: 10vh;
+}
+
+.card-number input {    /* resets padding of input inside card-number */
+  padding: 12px 0;
 }
 
 .card-row {
@@ -62,8 +83,10 @@ input, select {
 .payment-options {
   display: flex;
   flex-wrap: wrap;
+  justify-self: center;
   gap: 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .pay-btn {
@@ -73,20 +96,19 @@ input, select {
   font-family: sans-serif;
   cursor: pointer;
 }
+  .paypal {
+    background-color: #fcd167;
+  }
 
-.paypal {
-  background-color: #fcd167;
-}
+  .shop {
+    background-color: #6e39f8;
+    color: white;
+  }
 
-.shop {
-  background-color: #6e39f8;
-  color: white;
-}
-
-.black {
-  background-color: black;
-  color: white;
-}
+  .black {
+    background-color: black;
+    color: white;
+  }
 
 .or-line {
   text-align: center;
@@ -97,7 +119,7 @@ input, select {
 .checkout-right {
   width: 400px;
   background-color: #cfd9ff;
-  padding: 20px;
+  padding: 3vh 0;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -113,15 +135,15 @@ input, select {
 
 .summary-title {
   text-align: center;
-  font-style: italic;
+  font-family: RunWild;
   border-bottom: 3px solid #c8e775;
   padding-bottom: 5px;
 }
 
 .scrollable-orders {
-  flex: 1;
+  flex:0.8;
   overflow-y: auto;
-  margin: 20px 0;
+  margin: 5vh 2vh ;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -131,7 +153,6 @@ input, select {
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: white;
   padding: 10px;
   border-radius: 10px;
 }
@@ -143,6 +164,13 @@ input, select {
 
 .product-name {
   font-weight: bold;
+}
+
+.checkout-btn-box {
+  background-color: #c8e775;
+  display: flex;
+  padding: 3vh;
+  flex-direction: column;
 }
 
 .checkout-btn {
