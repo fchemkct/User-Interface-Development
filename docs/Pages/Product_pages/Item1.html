@@ -41,14 +41,13 @@
                 <h2>Little Temperance <br> $18</h2>
               
                 <div class="quantity-selector">
-                    <button class="qty-btn">-</button>
-                    <div>1</div>
-                    <button class="qty-btn">+</button>
+                    <button class="qty-btn" id="btn-decrease">-</button>
+                    <div class="item-count" id = "item-quantity">1</div>
+                    <button class="qty-btn" id="btn-add">+</button>
                 </div>
-                <script src="/Css_stylesheet/testjs.js"></script>
                 <div class="option_dropdown">
                     <label onclick="toggleDropdown()">Size</label>
-                    <select id="dropdownOptions">
+                    <select id="size-option" name="size">
                         <option>200g</option>
                         <option>1kg</option>
                     </select>
@@ -56,7 +55,7 @@
               
                 <div class="option_dropdown">
                     <label>Grind</label>
-                    <select>
+                    <select id="grind-option" name="grind">
                         <option>Whole Beans</option>
                         <option>Espresso</option>
                         <option>French Press</option>
@@ -106,6 +105,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../../Javascript/Item.js"></script>
    
 </body>
 </html>
