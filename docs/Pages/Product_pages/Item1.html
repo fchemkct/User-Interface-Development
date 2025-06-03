@@ -13,14 +13,32 @@
     <link rel="stylesheet" href = "../../Css_stylesheet/fonts.css">
     <link rel="stylesheet" href = "../../Css_stylesheet/buttons.css">
     <link rel="stylesheet" href = "../../Css_stylesheet/Dropdowns.css">
-     <link rel="stylesheet" href = "../../Css_stylesheet/blocks.css">
+    <link rel="stylesheet" href = "../../Css_stylesheet/blocks.css">
+    <link rel="stylesheet" href = "../../Css_stylesheet/cart_popup.css">
 
    <!-- <link rel="stylesheet" href="Css_stylesheet\style_page.css.css"> -->
 </head>
 <body class="body" style="background-color: #f8eac9;">
+
+    <!-- the ID of this item, used to track items for js -->
+    <div id="itemID" style="display:none">1</div>
+
     <nav class="navbar">
-        <div class="logo">🙂TherSide</div>
-        <div class="nav-container">
+        <div class="nav-top">
+            <div class="icon" id="openSearchPopup">
+                <a href="#"><img src="../../Images/Navbar/Icon.png"></a>
+            </div>
+            <div class="logo">
+                <img src="../../Images/Navbar/logo.png" class="logo-img">
+            </div>
+            <div class="icon" id="openCartPopup">
+                <a href="#"><img src="../../Images/Navbar/Shopping cart.png"></a>
+            </div>
+            <div class="icon">
+                <a href="#"><img src="../../Images/Navbar/User.png"></a>
+            </div>
+        </div>
+        <div class="nav-down">
             <ul class="nav-links">
                 <li><a href="../Home/home.html">Home</a></li>
                 <li><a href="../Products_list/shop.html">Shop</a></li>
@@ -28,7 +46,49 @@
                 <li><a href="../Subscription/subscription.html">Subscription</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
+
+          <!-- Trigger Button -->
+  <!-- <button id="openPopupBtn">Open Menu</button> -->
+
+  <!-- Overlay Popup -->
+    <div id="popupOverlay" class="search-overlay">
+        <div class="search-popup" onclick="event.stopPropagation()">
+            <div class="search-bar">
+                <img class="search-icon-bar" src="../../Images/Navbar/Icon.png">
+                <input 
+                    id="searchInput" 
+                    type="text" 
+                    placeholder = "" 
+                    value = "" 
+                    class="search-input"
+                >
+            </div>
+            <nav class="search-popup-nav">
+                <div class = "search-nav">
+                    <a href="../Home/home.html">Home</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="../Products_list/shop.html">Shop</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="#">About us</a>
+                </div>
+                <div class = "search-nav">
+                    <a href="../Subscription/subscription.html">Subscription</a>
+                </div>
+            
+            </nav>
+            <button id="searchBtn" class="search-btn">
+                <a href="../Search_for_products/search_results.html">Search</a>
+            </button>
+        </div>
+    </div>    
+
+        <!-- cart-popup.html -->
+    <div id="cart-popup" class="cart-popup-overlay" onclick="closeCartPopup(event)">
+    </div>
+
 
     <div class = "sample-product">
         <div class ="split-sample">
@@ -38,7 +98,7 @@
         </div>
         <div class="split-sample">
             <div class="product-details">
-                <h2>Little Temperance <br> $18</h2>
+                <h2><div id="itemName">Little Temperance</div><div id="itemPrice">$18</div></h2>
               
                 <div class="quantity-selector">
                     <button class="qty-btn" id="btn-decrease">-</button>
@@ -46,7 +106,7 @@
                     <button class="qty-btn" id="btn-add">+</button>
                 </div>
                 <div class="option_dropdown">
-                    <label onclick="toggleDropdown()">Size</label>
+                    <label>Size</label>
                     <select id="size-option" name="size">
                         <option>200g</option>
                         <option>1kg</option>
@@ -65,7 +125,7 @@
                 </div>
               
                 <div class="add-to-cart">
-                    <button class="cart-btn">Add to cart</button>
+                    <button class="cart-btn" id="add-to-cart">Add to cart</button>
                 </div>
               </div>
         </div>
@@ -107,6 +167,8 @@
     </footer>
 
     <script src="../../Javascript/Item.js"></script>
-   
+    <script src="../../Javascript/search_popup.js"></script>
+    <script src="../../Javascript/cart_popup.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 const popup = document.getElementById("popupOverlay");
-const openBtn = document.getElementById("openPopupBtn");
+const openBtn = document.getElementById("openSearchPopup");
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -30,7 +30,7 @@ searchBtn.addEventListener("click", function (event) {
         if (stored_input)
         {
             localStorage.setItem("search_input", stored_input);
-            window.location.href = "../Pages/Search_for_products/search_results.html";
+            window.location.href = "../Pages/Cart/Cart.html";
         }
     }
 
