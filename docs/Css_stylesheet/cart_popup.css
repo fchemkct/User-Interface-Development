@@ -91,17 +91,29 @@
   background-color: #c7e685;
   padding: 10px 20px;
   border-radius: 18px;
-  font-size: 16px;
   cursor: pointer;
   border: none;
 }
 
 .checkout {
   background-color: black;
-  color: white;
   padding: 10px 20px;
   border-radius: 18px;
-  font-size: 16px;
   cursor: pointer;
   border: none;
 }
+
+.view-cart a {
+  font-size: 16px;
+  font-family: Inter;
+  color: black;
+  text-decoration: none;
+}
+
+.checkout a {
+  font-family: Inter;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+

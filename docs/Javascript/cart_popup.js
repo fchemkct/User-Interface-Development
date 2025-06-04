@@ -5,6 +5,8 @@ const itemID = +document.getElementById("itemID").innerHTML;
 
 const itemID_list = [1,2];
 writeCart();
+const ToCartPage = document.getElementsByClassName("view-cart");
+const ToCheckOut = document.getElementsByClassName("checkout");
 const item_list = document.getElementById("cart-items");
 
 CartBtn.onclick = () => {
@@ -15,6 +17,17 @@ CartBtn.onclick = () => {
 CartPopupArea.onclick = () => {
     closeCartPopup();
 }
+
+ToCartPage.onclick = () => {
+    console.log("to cart")
+    window.location.href = "../Cart/Cart.html"
+}
+
+ToCheckOut.onclick = () => {
+    console.log("to checkout")
+    window.location.href = "../Payment_and_delivery/checkout.html"
+}
+
 
 window.addEventListener("beforeunload", function (e) {
     // Optionally save state, warn user, or log something
@@ -128,8 +141,8 @@ function writeCart()
 {
     CartPopupArea.innerHTML = `<div class="cart-popup" onclick="event.stopPropagation()">
             <div class="cart-header">
-            <h2>CART</h2>
-            <a href="#" class="continue-link" id="close">Continue shopping</a>
+                <h2>CART</h2>
+                <a href="#" class="continue-link" id="close">Continue shopping</a>
             </div>
 
             <div class="cart-items" id="cart-items">
@@ -137,11 +150,13 @@ function writeCart()
             </div>
 
             <div class="cart-footer">
-            <button class="view-cart">View cart</button>
-            <button class="checkout">Check out</button>
+                <button class="view-cart"><a href="../Cart/Cart.html">View cart</a></button>
+                <button class="checkout"><a href="../Payment_and_delivery/checkout.html">Check out</a></button>
             </div>
         </div>`;
 }
+
+
 
 function openCart()
 {
