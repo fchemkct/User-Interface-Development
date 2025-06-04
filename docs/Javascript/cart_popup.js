@@ -3,7 +3,7 @@ const CartBtn = document.getElementById("openCartPopup");
 var PrevItemIndex;
 
 const itemID_list = [1,2];
-
+writeCart();
 const item_list = document.getElementById("cart-items");
 
 CartBtn.onclick = () => {
@@ -109,9 +109,29 @@ function FillItemData(item_list, index) {
     }
 }
 
+function writeCart()
+{
+    CartPopupArea.innerHTML = `<div class="cart-popup" onclick="event.stopPropagation()">
+            <div class="cart-header">
+            <h2>CART</h2>
+            <a href="#" class="continue-link" id="close">Continue shopping</a>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                
+            </div>
+
+            <div class="cart-footer">
+            <button class="view-cart">View cart</button>
+            <button class="checkout">Check out</button>
+            </div>
+        </div>`;
+}
+
 function openCart()
 {
     CartPopupArea.style.display = "flex";
+
     FillItemData(item_list, itemID);
     FillItemData(item_list, itemID+1);
     FillItemData(item_list, itemID-1);
