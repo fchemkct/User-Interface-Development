@@ -1,13 +1,15 @@
 const CartPopupArea = document.getElementById("cart-popup");
 const CartBtn = document.getElementById("openCartPopup");
 var PrevItemIndex;
-const itemID = +document.getElementById("itemID").innerHTML;
+const itemID = +document.getElementById("itemID").textContent.trim();
 
 const itemID_list = [1,2];
 writeCart();
+
 const ToCartPage = document.getElementsByClassName("view-cart");
 const ToCheckOut = document.getElementsByClassName("checkout");
-const item_list = document.getElementById("cart-items");
+const item_list = document.getElementById("popup-cart-items");
+const ContShop = document.getElementById("close");
 
 CartBtn.onclick = () => {
     // writeCart();
@@ -18,15 +20,10 @@ CartPopupArea.onclick = () => {
     closeCartPopup();
 }
 
-ToCartPage.onclick = () => {
-    console.log("to cart")
-    window.location.href = "../Cart/Cart.html"
-}
-
-ToCheckOut.onclick = () => {
-    console.log("to checkout")
-    window.location.href = "../Payment_and_delivery/checkout.html"
-}
+ContShop.addEventListener("click", function() {
+    closeCartPopup()
+    window.location.href = "../Products_list/shop.html";
+});
 
 
 window.addEventListener("beforeunload", function (e) {
@@ -145,7 +142,7 @@ function writeCart()
                 <a href="#" class="continue-link" id="close">Continue shopping</a>
             </div>
 
-            <div class="cart-items" id="cart-items">
+            <div class="popup-cart-items" id="popup-cart-items">
                 
             </div>
 
@@ -186,7 +183,7 @@ function closeCartPopup() {
                 <a href="#" class="continue-link">Continue shopping</a>
             </div>
 
-            <div class="cart-items">
+            <div class="popup-cart-items">
                 <div class="cart-item">
                     <img src="Images/item.png" alt="Product">
                     <div class="item-details">
