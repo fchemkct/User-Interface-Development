@@ -4,14 +4,14 @@ const ButtonAdd = document.getElementById("btn-add");
 const SizeOption = document.getElementById("size-option");
 const GrindOption = document.getElementById("grind-option");
 const AddToCartBtn = document.getElementById("add-to-cart");
-const itemID = document.getElementById("itemID").innerHTML;
+const itemID = +document.getElementById("itemID").innerHTML;
 const item_Name = document.getElementById("itemName").innerHTML;
 const item_Price = document.getElementById("itemPrice").innerHTML.slice(1);
 
 var SelectedSize = SizeOption.value;
 var SelectedGrind = GrindOption.value;
 var count = 1;
-
+console.log("item id is: " + itemID)
 const items = [];
 const item = {
   itemName: item_Name,
@@ -21,7 +21,7 @@ const item = {
   itemGrind: SelectedGrind
 };
 
-localStorage.clear();
+// localStorage.clear();
 
 ButtonDecrease.onclick = () => {
   if(count > 1)
@@ -57,12 +57,8 @@ AddToCartBtn.addEventListener("click", function(event) {
   if (event)
   {
     UpdateItem();
-    if(localStorage.getItem(`item${itemID}`))
-    {
-      console.log("refreshed");
-      localStorage.removeItem(`item${itemID}`);
-    }
     SaveItemData();
+    FillItemData(item_list, itemID);
     // window.location.href = "../Pages/Payment_and_delivery/checkout.html";
   }
 });

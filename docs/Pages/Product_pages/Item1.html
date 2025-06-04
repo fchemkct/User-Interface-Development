@@ -87,6 +87,21 @@
 
         <!-- cart-popup.html -->
     <div id="cart-popup" class="cart-popup-overlay" onclick="closeCartPopup(event)">
+        <div class="cart-popup" onclick="event.stopPropagation()">
+            <div class="cart-header">
+            <h2>CART</h2>
+            <a href="#" class="continue-link" id="close">Continue shopping</a>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                
+            </div>
+
+            <div class="cart-footer">
+            <button class="view-cart">View cart</button>
+            <button class="checkout">Check out</button>
+            </div>
+        </div>
     </div>
 
 
