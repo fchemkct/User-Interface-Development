@@ -4,7 +4,6 @@ const ButtonAdd = document.getElementById("btn-add");
 const SizeOption = document.getElementById("size-option");
 const GrindOption = document.getElementById("grind-option");
 const AddToCartBtn = document.getElementById("add-to-cart");
-const itemID = +document.getElementById("itemID").innerHTML;
 const item_Name = document.getElementById("itemName").innerHTML;
 const item_Price = document.getElementById("itemPrice").innerHTML.slice(1);
 
@@ -18,7 +17,8 @@ const item = {
   itemPrice: '$' + item_Price * count,
   itemCount: count, 
   itemSize: SelectedSize, 
-  itemGrind: SelectedGrind
+  itemGrind: SelectedGrind,
+  inList: false
 };
 
 // localStorage.clear();

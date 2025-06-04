@@ -1,6 +1,7 @@
 const CartPopupArea = document.getElementById("cart-popup");
 const CartBtn = document.getElementById("openCartPopup");
 var PrevItemIndex;
+const itemID = +document.getElementById("itemID").innerHTML;
 
 const itemID_list = [1,2];
 writeCart();
@@ -20,7 +21,7 @@ window.addEventListener("beforeunload", function (e) {
     console.log("User is leaving the page.");
 
     // If you want to show a confirmation dialog (not always allowed):
-    PrevItemIndex = itemID;
+    // PrevItemIndex = itemID;
     console.log("prev index is now: " + PrevItemIndex)
 });
 
@@ -47,6 +48,19 @@ function GetItemData(index) {
     
     var item = JSON.parse(localStorage.getItem(`item${index}`));
     return item;
+}
+
+function CheckDuplicate(item)
+{
+    const titles = document.getElementsByClassName("product-title")
+    Array.from(titles).forEach((title) => {
+        if (title.innerHTML === item.itemName)
+        {
+            return true;
+        }
+    });
+
+    return false;
 }
 
 function FillItemData(item_list, index) {
@@ -78,7 +92,7 @@ function FillItemData(item_list, index) {
                 </div>
                 <hr>
                 `;
-            console.log("item" + index + " filled")
+            console.log("item" + index + " filled");
         }
 
         else
@@ -101,7 +115,8 @@ function FillItemData(item_list, index) {
                 </div>
                 <hr>
                 `);
-            console.log("item" + index + " appended")
+            console.log("item" + index + " appended");
+           
         }
     }
     else {
