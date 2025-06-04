@@ -111,6 +111,19 @@
   text-align: left;
 }
 
+/* checkout page */
+.checkout-btn a {
+  text-decoration: none;
+  color: white;
+  font-family: Inter;
+}
+
+.checkout-btn:hover a {
+  text-decoration: none;
+  color: black;
+  font-family: Inter;
+}
+
 /* search results page */
 .search-result-count {
   font-family: Inter;

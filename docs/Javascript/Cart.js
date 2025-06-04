@@ -1,6 +1,6 @@
 const CartItems = document.getElementById("cart-items");
+const CartTotal = document.getElementById("cart-total");
 
-console.log("cart: itemID is: " + itemID)
 function AddCartItems (CartItems, itemIndex)
 {
     // console.log("cart: item id is: " + (itemID))
@@ -22,7 +22,7 @@ function AddCartItems (CartItems, itemIndex)
         CartItems.innerHTML = `<div class="cart-item">
                     <h2>${item.itemName}</h2>
                     <div class="item-details">
-                        <img src="Images/item.png" alt="Product">
+                        <img src="${item.itemImage}" alt="Product">
                         <div class="desc">
                             <div class="desc-text">
                                 <p>Size: ${item.itemSize}</p>
@@ -47,7 +47,7 @@ function AddCartItems (CartItems, itemIndex)
         CartItems.insertAdjacentHTML('beforeend', `<div class="cart-item">
                     <h2>${item.itemName}</h2>
                     <div class="item-details">
-                        <img src="Images/item.png" alt="Product">
+                        <img src="${item.itemImage}" alt="Product">
                         <div class="desc">
                             <div class="desc-text">
                                 <p>Size: ${item.itemSize}</p>
@@ -66,6 +66,13 @@ function AddCartItems (CartItems, itemIndex)
                 </div>`);
             console.log("appended");
     }
+
+    // adds up total price
+    var getPrice = parseInt(item.itemPrice.slice(1));
+    console.log("price is: " + getPrice);
+    var currentTotal = parseInt(CartTotal.innerHTML) || 0;
+    CartTotal.innerHTML = currentTotal + getPrice;
+
 }
 
 window.addEventListener("DOMContentLoaded", function()

@@ -80,23 +80,24 @@ function FillItemData(item_list, index) {
         return;
     }
     var item = GetItemData(index);
+    console.log("item img is: " + item.itemImage)
     if (item_list)
     {
         if (index == itemID)
         {
             item_list.innerHTML = `<div class="cart-item" id="item">
-                    <img src="Images/image-1.png" alt="Product">
-                    <div class="item-details">
-                            <div class="item">
-                                <p class="product-title">${item.itemName}</p>
-                                <p class="product-option">Size: ${item.itemSize}</p>
-                                <p class="product-option">Grind: ${item.itemGrind}</p>
-                            </div>
-                            <div class="quantity-selector">
-                                <button class="qty-btn" id="popup-btn-decrease">-</button>
-                                <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
-                                <button class="qty-btn" id="pop-up-btn-add">+</button>
-                            </div>
+                    <img src="${item.itemImage}" alt="Product">
+                    <div class="item-popup-details">
+                        <div class="item">
+                            <p class="product-title">${item.itemName}</p>
+                            <p class="product-option">Size: ${item.itemSize}</p>
+                            <p class="product-option">Grind: ${item.itemGrind}</p>
+                        </div>
+                        <div class="popup-selector">
+                            <button class="qty-btn" id="popup-btn-decrease">-</button>
+                            <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
+                            <button class="qty-btn" id="pop-up-btn-add">+</button>
+                        </div>
                     </div>
                     <div class="price">${item.itemPrice}</div>
                 </div>
@@ -108,14 +109,14 @@ function FillItemData(item_list, index) {
         else
         {
             item_list.insertAdjacentHTML('beforeend', `<div class="cart-item" id="item">
-                    <img src="Images/image-1.png" alt="Product">
-                    <div class="item-details">
+                    <img src="${item.itemImage}" alt="Product">
+                    <div class="item-popup-details">
                             <div class="item">
                                 <p class="product-title">${item.itemName}</p>
                                 <p class="product-option">Size: ${item.itemSize}</p>
                                 <p class="product-option">Grind: ${item.itemGrind}</p>
                             </div>
-                            <div class="quantity-selector">
+                            <div class="popup-selector">
                                 <button class="qty-btn" id="popup-btn-decrease">-</button>
                                 <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
                                 <button class="qty-btn" id="pop-up-btn-add">+</button>
@@ -186,12 +187,12 @@ function closeCartPopup() {
             <div class="popup-cart-items">
                 <div class="cart-item">
                     <img src="Images/item.png" alt="Product">
-                    <div class="item-details">
+                    <div class="item-popup-details">
                     <p class="product-title">Little Temperance</p>
                     <p class="product-option">Size: 200G</p>
                     <p class="product-option">Grind: WHOLE BEANS</p>
 
-                    <div class="quantity-selector">
+                    <div class="popup-selector">
                         <button>-</button>
                         <div>1</div>
                         <button>+</button>
