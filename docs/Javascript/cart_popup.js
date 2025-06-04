@@ -26,6 +26,8 @@ ContShop.addEventListener("click", function() {
 });
 
 
+
+
 window.addEventListener("beforeunload", function (e) {
     // Optionally save state, warn user, or log something
     console.log("User is leaving the page.");
