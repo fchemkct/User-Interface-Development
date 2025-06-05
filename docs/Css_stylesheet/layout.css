@@ -4,8 +4,6 @@
 .split-display {
   display: flex;
   min-height: 500px;
-  
-
 }
 .split-right {
   flex: 1;
@@ -88,6 +86,14 @@
   overflow: hidden;
   font-size: 20px;
 }
+
+@media screen and (max-width: 400px) {
+  .split-display {
+    display: flex;
+    flex-direction: column;
+  }
+  
+} 
 
 /* shop page */
 .product-grid {

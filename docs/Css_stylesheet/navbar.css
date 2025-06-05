@@ -51,6 +51,18 @@
     gap: 3em;
   }
 
+@media screen and (max-width: 390px) {
+  .nav-down {
+    display: none;
+  }
+
+  
+  .hamburger {
+    display: block;
+  }
+  
+}
+
 /* search popup nav */
 .search-nav:hover {
   padding: auto;
