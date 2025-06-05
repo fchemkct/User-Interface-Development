@@ -47,6 +47,7 @@ input, select {
   font-family: Inter;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .card-number img {
@@ -56,11 +57,47 @@ input, select {
 
 .card-number input {    /* resets padding of input inside card-number */
   padding: 12px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: Inter;
 }
 
 .card-row {
   display: flex;
+  justify-content: space-around;
   gap: 10px;
+  
+}
+
+@media screen and (max-width: 400px) {
+  
+  .card-row input {
+    width: 11vh;
+  }
+
+  .card-number {
+    border: none;
+    background-color: #cfd9ff;
+    font-family: Inter;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+  }
+
+  .card-number img {
+    padding: 0 0   0 14vh;
+    position:absolute;
+  }
+
+  .card-number input {    /* resets padding of input inside card-number */
+    padding: 12px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #cfd9ff;
+    font-family: Inter;
+  }
+
 }
 
 .discount-row {
@@ -117,7 +154,7 @@ input, select {
 
 /* RIGHT SUMMARY COLUMN */
 .checkout-right {
-  width: 400px;
+  width: 30%;
   background-color: #cfd9ff;
   padding: 3vh 0;
   position: sticky;
@@ -143,10 +180,9 @@ input, select {
 .scrollable-orders {
   flex:0.8;
   overflow-y: auto;
-  margin: 5vh 2vh ;
+  margin: 0vh 2vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .summary-item {
@@ -183,4 +219,48 @@ input, select {
   cursor: pointer;
   margin-top: auto;
   align-self: center;
+}
+
+.CloseSummary {
+  display: none;
+}
+
+
+@media screen and (max-width: 400px) {
+  .checkout-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(250vh - 15vh); /* adjust for header height */
+  }
+
+  /* LEFT FORM COLUMN */
+  .checkout-left {
+    order: 2;
+    flex: 1;
+    padding: 20px 40px;
+
+  }
+
+  /* RIGHT FORM COLUMN */
+  .checkout-right {
+    order: 1;
+    background-color: #cfd9ff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .checkout-btn-box {
+    display: none;
+  }
+
+  .CloseSummary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }

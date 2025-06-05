@@ -1,4 +1,21 @@
 const CheckoutItems = document.getElementById("checkout-items");
+const CloseSummary = document.getElementById("closeSummary");
+
+let closed = false;
+
+CloseSummary.addEventListener("click", function() {
+    if (!closed) {
+        CheckoutItems.style.display = "none";
+        closed = true;
+        console.log("closed");
+    } else {
+        CheckoutItems.style.display = "flex"; // or "block", depending on your layout
+        closed = false;
+        console.log("opened");
+    }
+});
+
+
 
 console.log("cart: itemID is: " + itemID)
 function AddCheckoutItems (CheckoutItems, itemIndex)

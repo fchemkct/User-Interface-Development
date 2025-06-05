@@ -31,13 +31,15 @@
 
 .add-to-cart {
   display: inline-flex;
-    align-items: center;
-    background-color: #c8e775;
-    border-radius: 1vmax;
-    overflow: hidden;
-    font-size: 2vmax;
-    font-weight: bold;
+  align-items: center;
+  background-color: #c8e775;
+  border-radius: 1vmax;
+  overflow: hidden;
+  font-size: 2vmax;
+  font-weight: bold;
   font-family: Segoe;
+  padding: 10px 20px;
+  cursor: pointer;
 }
   .cart-btn {
     background: none;
