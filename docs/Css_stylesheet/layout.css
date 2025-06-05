@@ -60,6 +60,7 @@
   display: flex;
   padding: 2vh;  
 }
+
 .split_cater {
   flex: 1;
   flex-direction: column;
@@ -67,6 +68,15 @@
   display:flex;
   align-items: center;
   padding:2vh;
+}
+
+@media screen and (max-width: 390px) {
+.Catering {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;  
+} 
+  
 }
 
 .product-details {

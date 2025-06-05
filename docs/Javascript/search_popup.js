@@ -7,7 +7,11 @@ console.log("desktop img is: " + searchImg);
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
-window.addEventListener("resize", () => {
+window.addEventListener("DOMContentLoaded", (BurgerMenu));
+window.addEventListener("resize", (BurgerMenu));
+
+
+function BurgerMenu() {
     if (window.innerWidth <= window.innerHeight) {
         searchImg.src = "../../Images/Navbar/burger.png"; // ✅ actually change the image
         console.log("search button img changed to: " + searchImg.src);
@@ -17,7 +21,7 @@ window.addEventListener("resize", () => {
         console.log("search button img changed to: " + searchImg.src);
         console.log("Now in desktop view");
     }
-});
+}
 
 openBtn.onclick = () => {
     popup.style.display = "flex";
