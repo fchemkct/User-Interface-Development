@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (search_matches.length == 0)
     {
         searchCount.innerHTML = "";
-        resultContainer.innerHTML = `<p style="text-align:center; font-family:cursive;">No results found for "${search_input}"</p>`;
+        resultContainer.innerHTML = `<p style="text-align:center; font-family:Inter;">No results found for "${search_input}"</p>`;
     }
         
     // Insert results in groups of 4 per grid

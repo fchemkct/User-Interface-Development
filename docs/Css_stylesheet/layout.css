@@ -113,7 +113,7 @@
 }
 
 .product {
-    width: 30vh;
+    width: 18vh;
     text-align: center;
 }
 
@@ -187,7 +187,7 @@ hr {
   flex-wrap: wrap;
   justify-content: left;
   gap: 3vh;
-  padding: 2vh;
+  padding: 1vh;
 }
 
 /* search popup */
