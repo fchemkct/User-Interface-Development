@@ -119,6 +119,10 @@
   font-size: 2vmax;
 }
 
+.product-name {
+  font-weight: bold;
+}
+
 .to-checkout-btn:hover a {
   text-decoration: none;
   color: black;

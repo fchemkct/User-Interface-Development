@@ -175,9 +175,7 @@
     align-items: center;
     min-width: 10vmax;
   }
-
 }
-
 
 .order-total {
     padding: 0 5vmax;
@@ -341,6 +339,241 @@ hr {
     background-color: #c8e775;
     margin-bottom: 5vmax;
 
+  }
 }
+
+/* checkout page */
+
+.checkout-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(250vh - 120px); /* adjust for header height */
+}
+
+/* LEFT FORM COLUMN */
+.checkout-left {
+  flex: 1;
+  padding: 20px 40px;
+
+}
+
+.form-section {
+  margin-bottom: 40px;
+
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background-color: #c8e775;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: Inter;
+}
+
+/* for card numbers */
+.card-number {
+  padding: 0 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: Inter;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-number input {    /* resets padding of input inside card-number */
+  padding: 12px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: #cfd9ff;
+  font-family: Inter;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  
+}
+
+@media screen and (max-width: 400px) {
+  .card-row input {
+    width: 11vh;
+  }
+
+  .card-number {
+    border: none;
+    background-color: #cfd9ff;
+    font-family: Inter;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+  }
+
+  .card-number img {
+    padding: 0 0   0 14vh;
+    position:absolute;
+  }
+
+  .card-number input {    /* resets padding of input inside card-number */
+    padding: 12px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #cfd9ff;
+    font-family: Inter;
+  }
+}
+
+.discount-row {
+  display: flex;
+  gap: 10px;
+}
+
+.discount-row input {
+  flex: 1;
+}
+
+.discount-row button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #cfd9ff;
+  cursor: pointer;
+}
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* RIGHT SUMMARY COLUMN */
+.checkout-right {
+  width: 30%;
+  background-color: #cfd9ff;
+  padding: 3vh 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sticky-summary {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.summary-title {
+  text-align: center;
+  font-family: RunWild;
+  border-bottom: 3px solid #c8e775;
+  padding-bottom: 5px;
+}
+
+.scrollable-orders {
+  flex:0.8;
+  overflow-y: auto;
+  margin: 0vh 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.checkout-btn-box {
+  background-color: #c8e775;
+  display: flex;
+  padding: 3vh;
+  flex-direction: column;
+}
+
+.checkout-btn-mobile {
+  display: none;
+}
+
+.checkout-btn {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: center;
+}
+
+.CloseSummary {
+  display: none;
+}
+
+
+@media screen and (max-width: 400px) {
+  .checkout-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(250vh - 15vh); /* adjust for header height */
+  }
+
+  /* LEFT FORM COLUMN */
+  .checkout-left {
+    order: 2;
+    flex: 1;
+    padding: 20px 40px;
+
+  }
+
+  /* RIGHT FORM COLUMN */
+  .checkout-right {
+    order: 1;
+    background-color: #cfd9ff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .checkout-btn-box {
+    display: none;
+  }
+
+  .checkout-btn-mobile {
+    background-color: #c8e775;
+    display: flex;
+    padding: 1vh;
+    flex-direction: column;
+  }
+
+  .CloseSummary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
 }

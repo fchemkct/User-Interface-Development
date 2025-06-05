@@ -1,3 +1,5 @@
+/* item page */
+
 .quantity-selector {
     display: inline-flex;
     align-items: center;
@@ -106,6 +108,27 @@
     background-color: white;
     color: black;
 }
+
+.pay-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+  .paypal {
+    background-color: #fcd167;
+  }
+
+  .shop {
+    background-color: #6e39f8;
+    color: white;
+  }
+
+  .black {
+    background-color: black;
+    color: white;
+  }
 
 /* search popup */
 .search-btn {

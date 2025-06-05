@@ -40,7 +40,6 @@
 
 }
 
-
 /* search popup page */
 .search-icon-bar {
   left: 15px;
@@ -49,7 +48,16 @@
   pointer-events: none; /* don't block input clicks */
 }
 
+/* checkout page */
+.card-number img {
+  align-self: center;
+  padding-left: 10vh;
+}
 
+.summary-item img {
+  width: 50px;
+  height: auto;
+}
 
 
 
