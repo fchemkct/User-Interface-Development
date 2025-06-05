@@ -19,6 +19,19 @@
     height: auto;
 }
 
+/* item page */
+.item img {
+    width: 150%;
+    height: auto;
+}
+
+@media screen and (max-width: 400px) {
+    .item img {
+        width: 50%;
+        height: auto;
+    }
+
+}
 
 /* cart page */
 .item-details img {

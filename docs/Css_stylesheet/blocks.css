@@ -3,9 +3,9 @@
     background-color: #FFECC9;  
     display: flex;
     align-items: flex-start;
-    gap: 4vh;
-    padding: 2vh;
-    padding-bottom: 10vh;
+    gap: 4vmax;
+    padding: 2vmax;
+    padding-bottom: 10vmax;
     flex-wrap: wrap;
 
 }
@@ -17,22 +17,18 @@
 
 .block_1 {
   background-color: #b7e47b;
-  padding-left: 3vh;
-  padding-right: 3vh;
-  border-radius: 3vh;
-  width: 25vh;
-  max-width: 800px;
-  margin: 2vh auto;
-  font-size: 2vh;
-  
+  padding-left: 3vmax;
+  padding-right: 3vmax;
+  border-radius: 3vmax;
+  width: 30vmax;
+  margin: 2vmax auto;
+  font-size: 2vmax;
 }
 
 .block_2 {
   background-color: #b7e47b;
-  padding: 30px;
-  width: 25vh;
-  border-radius: 3vh;
-  max-width: 800px;
-  margin: 2vh auto;
-  font-size: 2vh;
+  width: 40vmax;
+  border-radius: 3vmax;
+  margin: 2vmax auto;
+  font-size: 2vmax;
 }

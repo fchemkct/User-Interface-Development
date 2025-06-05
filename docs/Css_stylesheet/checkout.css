@@ -209,6 +209,10 @@ input, select {
   flex-direction: column;
 }
 
+.checkout-btn-mobile {
+  display: none;
+}
+
 .checkout-btn {
   background-color: black;
   color: white;
@@ -255,6 +259,13 @@ input, select {
 
   .checkout-btn-box {
     display: none;
+  }
+
+  .checkout-btn-mobile {
+    background-color: #c8e775;
+    display: flex;
+    padding: 1vh;
+    flex-direction: column;
   }
 
   .CloseSummary {

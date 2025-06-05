@@ -41,7 +41,7 @@
   p {
     font-family: Inter;
     text-align: center;
-    font-size: 1vmax;
+    font-size: 1.2vmax;
   }
 
   li a {
@@ -112,16 +112,24 @@
 }
 
 /* checkout page */
-.checkout-btn a {
+.to-checkout-btn a {
   text-decoration: none;
   color: white;
   font-family: Inter;
+  font-size: 2vmax;
 }
 
-.checkout-btn:hover a {
+.to-checkout-btn:hover a {
   text-decoration: none;
   color: black;
   font-family: Inter;
+}
+
+.confirm-text {
+  text-decoration: none;
+  color: white;
+  font-family: Inter;
+  font-size: 2vmax;
 }
 
 /* search results page */

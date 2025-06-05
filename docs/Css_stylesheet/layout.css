@@ -164,14 +164,20 @@
     background-color: #c8e775;
     padding: 3vmax 2vmax;
     box-sizing: border-box;
+    position: sticky;
+    top: 30vmax;
+  }
+
+  .to-checkout {
+    padding: 5vmax 5vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 10vmax;
   }
 
 }
 
-.order-box {
-  position: sticky;
-  top: 3vmax;
-}
 
 .order-total {
     padding: 0 5vmax;
@@ -180,12 +186,13 @@
     font-size: 1.8vmax;
 }
 
-.checkout {
-    padding: 5vmax 5vmax;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 10vmax;
+.to-checkout {
+  margin-top: 20vmax;
+  padding: 5vmax 5vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10vmax;
 }
 
 .cart-item {
