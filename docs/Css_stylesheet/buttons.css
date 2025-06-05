@@ -2,19 +2,19 @@
     display: inline-flex;
     align-items: center;
     background-color: #c8e775;
-    border-radius: 10px;
+    border-radius: 1vmax;
     overflow: hidden;
-    font-size: 24px;
+    font-size: 2vmax;
     font-weight: bold;
   }
   
   .qty-btn {
     background: none;
     border: none;
-    padding: 6px 15px;
+    padding: 6px 1vmax;
     cursor: pointer;
     color: #000;
-    font-size: 24px;
+    font-size: 2vmax;
     transition: background 0.2s;
   }
   
@@ -23,7 +23,7 @@
   }
   
   .qty-value {
-    padding: 10px 20px;
+    padding: 10px 2vmax;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
   }
@@ -33,19 +33,19 @@
   display: inline-flex;
     align-items: center;
     background-color: #c8e775;
-    border-radius: 10px;
+    border-radius: 1vmax;
     overflow: hidden;
-    font-size: 24px;
+    font-size: 2vmax;
     font-weight: bold;
   font-family: Segoe;
 }
   .cart-btn {
     background: none;
     border: none;
-    padding: 6px 15px;
+    padding: 6px 1vmax;
     cursor: pointer;
     color: #000;
-    font-size: 24px;
+    font-size: 2vmax;
     transition: background 0.2s;
     font-family: Segoe;
     text-decoration: none;
@@ -63,12 +63,12 @@
 
 .checkout-btn {
   width: 70%;
-  padding: 2vh;
+  padding: 2vmax;
   background-color: black;
   color: white;
   border: none;
-  border-radius: 30px;
-  font-size: 16px;
+  border-radius: 3vmax;
+  font-size: 1.6vmax;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -80,14 +80,14 @@
 
 /* search popup */
 .search-btn {
-  margin-top: 20px;
-  padding: 10px 30px;
+  margin-top: 2vmax;
+  padding: 1vmax 3vmax;
   border: none;
-  border-radius: 20px;
+  border-radius: 2vmax;
   background-color: #fdf0cc;
   color:black;
   font-family: Segoe;
-  font-size: 18px;
+  font-size: 1.8vmax;
   display: inline-block; /* Hidden initially */
   visibility:hidden;
   cursor: pointer;
