@@ -38,7 +38,8 @@ function AddCartItems (CartItems, itemIndex)
                         </div>
                         <p class="price">${item.itemPrice}</p>
                     </div>
-                </div>`;
+                </div>
+                <hr>`;
             console.log("filled");
     }
 
@@ -63,7 +64,8 @@ function AddCartItems (CartItems, itemIndex)
                         </div>
                         <p class="price">${item.itemPrice}</p>
                     </div>
-                </div>`);
+                </div>
+                <hr>`);
             console.log("appended");
     }
 

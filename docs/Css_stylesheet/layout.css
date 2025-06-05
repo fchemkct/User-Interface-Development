@@ -195,6 +195,7 @@
 .item-details {
   display: flex;
   justify-content: space-between;
+  padding: 2vh 0;
   
 }
 
