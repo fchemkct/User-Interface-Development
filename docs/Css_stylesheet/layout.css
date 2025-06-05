@@ -85,6 +85,35 @@
   
 }
 
+.hours-section {
+  text-align: center;
+  background-color: #c5e57b; /* light green */
+  padding: 5vmax 1vmax;
+  font-family: Segoe; /* use your chosen font */
+}
+
+.hours-title {
+  font-size: 3vmax;
+  margin-bottom: 1vmax;
+  font-style: italic;
+  font-weight: bold;
+  font-family: RunWild;
+}
+
+.hours-box {
+  display: inline-block;
+  background-color: #f7e9c5; /* light cream */
+  padding: 2vmax 5vmax;
+  border-radius: 40px;
+  line-height: 2.5vmax;
+}
+
+.hours-box p {
+  font-family: Segoe;
+  font-size: 1.6vmax;
+  font-weight: 500;
+}
+
 /* item page */
 .product-details {
   display: flex;

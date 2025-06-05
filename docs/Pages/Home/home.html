@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="../../Css_stylesheet/style_page.css">
     <link rel="stylesheet" href="../../Css_stylesheet/navbar.css">
     <link rel="stylesheet" href = "../../Css_stylesheet/footer.css">
@@ -20,7 +19,7 @@
 </head>
 
 <body class="body">
-
+    <!-- id for cart popup -->
     <div id="itemID" style="display:none">1</div>
 
     <nav class="navbar">
@@ -48,10 +47,7 @@
         </div>
     </nav>
 
-          <!-- Trigger Button -->
-  <!-- <button id="openPopupBtn">Open Menu</button> -->
-
-  <!-- Overlay Popup -->
+    <!-- Overlay Popup -->
     <div id="popupOverlay" class="search-overlay">
         <div class="search-popup" onclick="event.stopPropagation()">
             <div class="search-bar">
@@ -85,12 +81,11 @@
         </div>
     </div>    
 
-        <!-- cart-popup.html -->
+        <!-- cart-popup inserted via javascript -->
     <div id="cart-popup" class="cart-popup-overlay" onclick="closeCartPopup(event)"></div>
     </div>
 
     <!-- main content -->
-    
     <div  class = "split-display">
         <div class = "split-left">
             <img class="img" src="../../Pages/Home/Images/scroll_1.png" alt="Coffee yay">
@@ -135,16 +130,19 @@
         </div>
     </div>
     
-    <div class = "Time">
-        <h1>Time</h1>
-        <p>MON 6:30-16:00</p>
-        <p> TUE 6:30-16:00</p>
-        <p>WED 6:30-16:00</p>
-        <p>THU 6:30-16:00</p>
-        <p>FRI 6:30-16:00</p>
-        <p> SAT 7:30-15:30</p>
-        <p>SUN 7:30-15:30</p>
+    <div class="hours-section">
+        <h2 class="hours-title">TIME</h2>
+        <div class="hours-box">
+            <p>MON 6:30-16:00</p>
+            <p>TUE 6:30-16:00</p>
+            <p>WED 6:30-16:00</p>
+            <p>THU 6:30-16:00</p>
+            <p>FRI 6:30-16:00</p>
+            <p>SAT 7:30-15:30</p>
+            <p>SUN 7:30-15:30</p>
+        </div>
     </div>
+
 
      <footer class="footer">
         <div class="footer-signup">
