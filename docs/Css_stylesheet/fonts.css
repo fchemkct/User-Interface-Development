@@ -26,7 +26,7 @@
     font-family: RunWild;
     color: #000000;
     text-align: center;
-    font-size: 3em;
+    font-size: 2vh;
     font-weight: normal;
   }
 
@@ -34,14 +34,14 @@
     font-family: Segoe;
     color: #000000;
     text-align: center;
-    font-size: 3em;
+    font-size: 2vh;
     font-weight: normal;
   }
   
   p {
     font-family: Inter;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1vh;
   }
 
   li a {
@@ -57,11 +57,11 @@
 
   .title {
     align-items: center;
-    line-height: 0.5em;
+    line-height: 0.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2em;
+    padding: 2vh;
 
   }
 
@@ -75,21 +75,21 @@
     font-family: Segoe;
     color: black;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 
 /* for shop page */
 .shop-category-title {
   font-family: RunWild;
-  font-size: 40px;
-  margin-top: 40px;
+  font-size: 4vh;
+  margin-top: 4vh;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .product a {
     font-family: Segoe;
-    font-size: 20px;
+    font-size: 2vh;
     color: black;
     text-decoration: none;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
@@ -127,12 +127,12 @@
 /* search results page */
 .search-result-count {
   font-family: Inter;
-  font-size: 1.1em;
-  margin-top: 4em;
+  font-size: 1vh;
+  margin-top: 4vh;
 }
 
 /* individual item page */
 .item-count {
   font-family: Inter;
-  font-size: 18px;
+  font-size: 1vh;
 }
