@@ -3,33 +3,26 @@ const CloseSummary = document.getElementById("closeSummary");
 
 let closed = false;
 
+// if on mobile, clicking on arrow will open or close summary dropdown
 CloseSummary.addEventListener("click", function() {
     if (!closed) {
         CheckoutItems.style.display = "none";
         closed = true;
-        console.log("closed");
-    } else {
+    } 
+    
+    else {
         CheckoutItems.style.display = "flex"; // or "block", depending on your layout
         closed = false;
-        console.log("opened");
     }
 });
 
-
-
-console.log("cart: itemID is: " + itemID)
+// adds item data from cart to checkout page
 function AddCheckoutItems (CheckoutItems, itemIndex)
 {
-    // console.log("cart: item id is: " + (itemID))
-    // console.log("cart: item id is: " + (itemIndex))
-    // itemIndex = parseInt(itemIndex);
-    
     if (GetItemData(itemIndex) == false)
     {
-        console.log("(cart) cant get item data at itemIndex: " + itemIndex);
         return;
     }
-    console.log("(cart) item data is at itemIndex: " + itemIndex);
 
     var item = GetItemData(itemIndex);
     
@@ -47,6 +40,7 @@ function AddCheckoutItems (CheckoutItems, itemIndex)
             console.log("filled");
     }
 
+    // else appends item
     else
     {
         CheckoutItems.insertAdjacentHTML('beforeend', `<div class="summary-item">
@@ -61,6 +55,7 @@ function AddCheckoutItems (CheckoutItems, itemIndex)
     }
 }
 
+// adds item data on opening page
 window.addEventListener("DOMContentLoaded", function()
 {
     AddCheckoutItems(CheckoutItems, itemID);

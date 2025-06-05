@@ -1,18 +1,13 @@
 const CartItems = document.getElementById("cart-items");
 const CartTotal = document.getElementById("cart-total");
 
+// displays item to the cart page
 function AddCartItems (CartItems, itemIndex)
 {
-    // console.log("cart: item id is: " + (itemID))
-    // console.log("cart: item id is: " + (itemIndex))
-    // itemIndex = parseInt(itemIndex);
-    
     if (GetItemData(itemIndex) == false)
     {
-        console.log("(cart) cant get item data at itemIndex: " + itemIndex);
         return;
     }
-    console.log("(cart) item data is at itemIndex: " + itemIndex);
 
     var item = GetItemData(itemIndex);
     
@@ -43,6 +38,7 @@ function AddCartItems (CartItems, itemIndex)
             console.log("filled");
     }
 
+    // else appends item
     else
     {
         CartItems.insertAdjacentHTML('beforeend', `<div class="cart-item">
@@ -77,6 +73,7 @@ function AddCartItems (CartItems, itemIndex)
 
 }
 
+// loads data on page being loaded
 window.addEventListener("DOMContentLoaded", function()
 {
     AddCartItems(CartItems, itemID);

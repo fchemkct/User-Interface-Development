@@ -11,47 +11,23 @@ const ToCheckOut = document.getElementsByClassName("checkout");
 const item_list = document.getElementById("popup-cart-items");
 const ContShop = document.getElementById("close");
 
+// opens cart
 CartBtn.onclick = () => {
-    // writeCart();
     openCart();
 }
 
+// closes cart
 CartPopupArea.onclick = () => {
     closeCartPopup();
 }
 
+// closes cart
 ContShop.addEventListener("click", function() {
     closeCartPopup()
     window.location.href = "../Products_list/shop.html";
 });
 
-
-
-
-window.addEventListener("beforeunload", function (e) {
-    // Optionally save state, warn user, or log something
-    console.log("User is leaving the page.");
-
-    // If you want to show a confirmation dialog (not always allowed):
-    // PrevItemIndex = itemID;
-    console.log("prev index is now: " + PrevItemIndex)
-});
-
-function CheckItem()
-{
-    for (i = 0; i < itemID_list.length; i++)
-    {
-        if ((JSON.parse(localStorage.getItem(`item${itemID_list[i]}`))))
-        {
-            console.log("storage not empty");
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
+// gets item data from local storage
 function GetItemData(index) {
     if (!JSON.parse(localStorage.getItem(`item${index}`)))
     {
@@ -62,6 +38,7 @@ function GetItemData(index) {
     return item;
 }
 
+// check if duplicates of the same item exists
 function CheckDuplicate(item)
 {
     const titles = document.getElementsByClassName("product-title")
@@ -75,14 +52,13 @@ function CheckDuplicate(item)
     return false;
 }
 
+// fills cart with items that has been added to cart
 function FillItemData(item_list, index) {
     if (GetItemData(index) == false)
     {
-        console.log("cant get item data at index: " + index);
         return;
     }
     var item = GetItemData(index);
-    console.log("item img is: " + item.itemImage)
     if (item_list)
     {
         if (index == itemID)
@@ -105,7 +81,6 @@ function FillItemData(item_list, index) {
                 </div>
                 <hr>
                 `;
-            console.log("item" + index + " filled");
         }
 
         else
@@ -128,15 +103,12 @@ function FillItemData(item_list, index) {
                 </div>
                 <hr>
                 `);
-            console.log("item" + index + " appended");
            
         }
     }
-    else {
-        console.log("item not found");
-    }
 }
 
+// writes the cart into the html page, opening it
 function writeCart()
 {
     CartPopupArea.innerHTML = `<div class="cart-popup" onclick="event.stopPropagation()">
@@ -157,7 +129,7 @@ function writeCart()
 }
 
 
-
+// opens cart on click
 function openCart()
 {
     CartPopupArea.style.display = "flex";
@@ -167,48 +139,7 @@ function openCart()
     FillItemData(item_list, itemID-1);
 }
 
+// closes cart
 function closeCartPopup() {
     CartPopupArea.style.display = "none";
 }
-
-// CloseBtn = document.getElementById("close");
-// CloseBtn.onclick = () => {
-//     closeCartPopup();
-// }
-
-
-
-
-/*
-<div class="cart-popup">
-            <div class="cart-header">
-                <h2>CART</h2>
-                <a href="#" class="continue-link">Continue shopping</a>
-            </div>
-
-            <div class="popup-cart-items">
-                <div class="cart-item">
-                    <img src="Images/item.png" alt="Product">
-                    <div class="item-popup-details">
-                    <p class="product-title">Little Temperance</p>
-                    <p class="product-option">Size: 200G</p>
-                    <p class="product-option">Grind: WHOLE BEANS</p>
-
-                    <div class="popup-selector">
-                        <button>-</button>
-                        <div>1</div>
-                        <button>+</button>
-                    </div>
-                    </div>
-                    <div class="price">$18</div>
-                </div>
-            <hr>
-            </div>
-
-            <div class="cart-footer">
-                <button class="view-cart">View cart</button>
-                <button class="checkout">Check out</button>
-            </div>
-        </div>
-
-*/

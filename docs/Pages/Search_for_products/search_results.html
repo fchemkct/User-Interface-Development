@@ -19,8 +19,10 @@
 </head>
 
 <body class="body" style="background-color: #FFECC9;">
+    <!-- item id for cart popup -->
     <div id="itemID" style="display:none">1</div>
 
+    <!-- navbar -->
     <nav class="navbar">
         <div class="nav-top">
             <div class="icon" id="openSearchPopup">
@@ -45,9 +47,6 @@
             </ul>
         </div>
     </nav>
-
-          <!-- Trigger Button -->
-  <!-- <button id="openPopupBtn">Open Menu</button> -->
 
   <!-- Overlay Popup -->
     <div id="popupOverlay" class="search-overlay">
@@ -83,14 +82,14 @@
         </div>
     </div>    
 
-        <!-- cart-popup.html -->
+    <!-- cart-popup.html -->
     <div id="cart-popup" class="cart-popup-overlay" onclick="closeCartPopup(event)"></div>
     </div>
 
 
     <div class="page-banner">SEARCH RESULT</div>
 
-
+    <!-- search results and result count -->
     <h1 class="search-result-count" id="search-count">1 result</h1>
     <div class="search-grid" id="product-grid"></div>
     

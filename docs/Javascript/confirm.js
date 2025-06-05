@@ -2,18 +2,13 @@ const ConfirmItems = document.getElementById("confirm-items-list");
 const ConfirmTotal1 = document.getElementById("confirm-total1");
 const ConfirmTotal2 = document.getElementById("confirm-total2");
 
+// displays purchased products in payment confirmation page 
 function AddConfirmItems (ConfirmItems, itemIndex)
 {
-    // console.log("cart: item id is: " + (itemID))
-    // console.log("cart: item id is: " + (itemIndex))
-    // itemIndex = parseInt(itemIndex);
-    
     if (GetItemData(itemIndex) == false)
     {
-        console.log("(cart) cant get item data at itemIndex: " + itemIndex);
         return;
     }
-    console.log("(cart) item data is at itemIndex: " + itemIndex);
 
     var item = GetItemData(itemIndex);
     
@@ -28,6 +23,7 @@ function AddConfirmItems (ConfirmItems, itemIndex)
             console.log("filled");
     }
 
+    // else appends item 
     else
     {
         ConfirmItems.insertAdjacentHTML('beforeend', `
@@ -47,6 +43,7 @@ function AddConfirmItems (ConfirmItems, itemIndex)
 
 }
 
+// loads data on page loaded
 window.addEventListener("DOMContentLoaded", function()
 {
     AddConfirmItems(ConfirmItems, itemID);

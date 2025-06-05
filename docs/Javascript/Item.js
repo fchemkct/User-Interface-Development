@@ -11,8 +11,10 @@ const item_Img = document.getElementById("item_img").src;
 var SelectedSize = SizeOption.value;
 var SelectedGrind = GrindOption.value;
 var count = 1;
-console.log("item id is: " + itemID)
+
 const items = [];
+
+// data struct used to store a product's data, used for display in other pages and popups
 const item = {
   itemImage: item_Img,
   itemName: item_Name,
@@ -23,8 +25,7 @@ const item = {
   inList: false
 };
 
-// localStorage.clear();
-
+// decreases item count
 ButtonDecrease.onclick = () => {
   if(count > 1)
   {
@@ -35,6 +36,7 @@ ButtonDecrease.onclick = () => {
   
 };
 
+// increases item count
 ButtonAdd.onclick = () => {
   count++;
   ItemCount.innerHTML = count;
@@ -42,19 +44,20 @@ ButtonAdd.onclick = () => {
   
 };
 
+// changes Size options
 SizeOption.addEventListener("change", function () {
   SelectedSize = SizeOption.value;
-
   UpdateItem();
   
 });
 
+// changes Grind options
 GrindOption.addEventListener("change", function () {
   SelectedGrind = GrindOption.value;
-
   UpdateItem();
 });
 
+// adds item to local storage
 AddToCartBtn.addEventListener("click", function(event) {
   if (event)
   {
@@ -65,6 +68,7 @@ AddToCartBtn.addEventListener("click", function(event) {
   }
 });
 
+// updates cart data to its most recent version
 function UpdateItem() 
 {
   item.itemImage = item_Img;
@@ -76,14 +80,9 @@ function UpdateItem()
   items[itemID] = item;
 }
 
+// saves product data to local storage
 function SaveItemData()
 {
   localStorage.setItem(`item${itemID}`, JSON.stringify(items[itemID])); 
-  console.log("(itemjs) item name is: " + item.itemName);
-  console.log("(itemjs) item price is: " + item.itemPrice);
-  console.log("(itemjs) item count is: " + item.itemCount);
-  console.log("(itemjs) size is: " + item.itemSize);
-  console.log("(itemjs) grind is: " + item.itemGrind);
-  console.log("storage saved!");
 }
 

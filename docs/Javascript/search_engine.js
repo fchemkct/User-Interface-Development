@@ -1,8 +1,3 @@
-
-
-
-// import search_input from "../Javascript/search_popup" 
-
 document.addEventListener("DOMContentLoaded", () => {
     const search_input = localStorage.getItem("search_input");
     const products = document.querySelectorAll("div.product");
