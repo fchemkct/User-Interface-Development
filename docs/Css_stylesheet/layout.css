@@ -274,15 +274,16 @@ hr {
 .confirmation-section {
   display: flex;
   padding-bottom: 5%;
-
 }
 
 .order-details {
+  order: 1;
   flex: 1;
   padding: 5%;
 }
 
 .summary {
+  order: 2;
   flex: 1;
   padding: 5%;
   background-color: #c8e775;
@@ -308,4 +309,31 @@ hr {
     align-items: center;
     padding: 5%;
     gap: 40vmax;
+}
+
+@media screen and (max-width: 400px) {
+  .confirmation-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+
+  .order-details {
+    order: 2;
+    flex: 1;
+    padding: 5%;
+    background-color: #c8e775;
+    gap: 5vmax;
+    margin-bottom: -2.3vmax;
+  }
+
+  .summary {
+    order: 1;
+    flex: 1;
+    padding: 5%;
+    background-color: #c8e775;
+    margin-bottom: 5vmax;
+
+}
+  
 }
