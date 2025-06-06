@@ -56,7 +56,9 @@ AddToCartBtn.addEventListener("click", function(event) {
   {
     UpdateItem();
     SaveItemData();
-    FillItemData(item_list, itemID);
+    location.reload();
+    openCart();
+    // FillItemData(item_list, itemID);
     
   }
 });

@@ -34,6 +34,7 @@ function PopDecreaseItem(index)
     if(count < 1)
     {
         localStorage.removeItem(`item${index}`); 
+        location.reload();
         return;
     }
     item.itemCount = count;
@@ -123,9 +124,9 @@ function FillItemData(item_list, index) {
                                 <p class="product-option">Grind: ${item.itemGrind}</p>
                             </div>
                             <div class="popup-selector">
-                                <button class="qty-btn" onclick="PopDecreaseItem(${itemID%index+1})" id="popup-btn-decrease">-</button>
+                                <button class="qty-btn" onclick="PopDecreaseItem(${index})" id="popup-btn-decrease">-</button>
                                 <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
-                                <button class="qty-btn" onclick="PopIncreaseItem(${itemID%index+1})" id="pop-up-btn-add">+</button>
+                                <button class="qty-btn" onclick="PopIncreaseItem(${index})" id="pop-up-btn-add">+</button>
                             </div>
                     </div>
                     <div class="price">${item.itemPrice}</div>
