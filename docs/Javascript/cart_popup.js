@@ -3,11 +3,9 @@ const CartBtn = document.getElementById("openCartPopup");
 var PrevItemIndex;
 const itemID = +document.getElementById("itemID").textContent.trim();
 
-const itemID_list = [1,2];
+const itemID_list = [];
 writeCart();
 
-const ToCartPage = document.getElementsByClassName("view-cart");
-const ToCheckOut = document.getElementsByClassName("checkout");
 const item_list = document.getElementById("popup-cart-items");
 const ContShop = document.getElementById("close");
 
@@ -26,6 +24,35 @@ ContShop.addEventListener("click", function() {
     closeCartPopup()
     window.location.href = "../Products_list/shop.html";
 });
+
+function PopDecreaseItem(index)
+{
+    var item = GetItemData(index);
+    var count = item.itemCount
+    console.log("item count was: " + item.itemCount)
+    count--;
+    if(count < 1)
+    {
+        localStorage.removeItem(`item${index}`); 
+        return;
+    }
+    item.itemCount = count;
+    localStorage.setItem(`item${index}`, JSON.stringify(item)); 
+    document.getElementsByClassName("item-count")[index-1].innerHTML = item.itemCount;
+    console.log("popup item decreased, count is: " + count);
+}
+
+function PopIncreaseItem(index)
+{
+    console.log("index is: " + index);
+    var item = GetItemData(index);
+    var count = item.itemCount
+    count++;
+    item.itemCount = count;
+    localStorage.setItem(`item${index}`, JSON.stringify(item)); 
+    document.getElementsByClassName("item-count")[index-1].innerHTML = item.itemCount;
+    console.log("popup item increased, count is: " + count);
+}
 
 // gets item data from local storage
 function GetItemData(index) {
@@ -59,10 +86,11 @@ function FillItemData(item_list, index) {
         return;
     }
     var item = GetItemData(index);
-    if (item_list)
+    if (item_list && !itemID_list.includes(index) && item.itemCount >= 1)
     {
-        if (index == itemID)
+        if (item_list.innerHTML == "")
         {
+            itemID_list[index] = index;
             item_list.innerHTML = `<div class="cart-item" id="item">
                     <img src="${item.itemImage}" alt="Product">
                     <div class="item-popup-details">
@@ -72,9 +100,9 @@ function FillItemData(item_list, index) {
                             <p class="product-option">Grind: ${item.itemGrind}</p>
                         </div>
                         <div class="popup-selector">
-                            <button class="qty-btn" id="popup-btn-decrease">-</button>
+                            <button class="qty-btn" onclick="PopDecreaseItem(${itemID%index+1})" id="popup-btn-decrease">-</button>
                             <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
-                            <button class="qty-btn" id="pop-up-btn-add">+</button>
+                            <button class="qty-btn" onclick="PopIncreaseItem(${itemID%index+1})" id="pop-up-btn-add">+</button>
                         </div>
                     </div>
                     <div class="price">${item.itemPrice}</div>
@@ -85,6 +113,7 @@ function FillItemData(item_list, index) {
 
         else
         {
+            itemID_list[index] = index;
             item_list.insertAdjacentHTML('beforeend', `<div class="cart-item" id="item">
                     <img src="${item.itemImage}" alt="Product">
                     <div class="item-popup-details">
@@ -94,9 +123,9 @@ function FillItemData(item_list, index) {
                                 <p class="product-option">Grind: ${item.itemGrind}</p>
                             </div>
                             <div class="popup-selector">
-                                <button class="qty-btn" id="popup-btn-decrease">-</button>
+                                <button class="qty-btn" onclick="PopDecreaseItem(${itemID%index+1})" id="popup-btn-decrease">-</button>
                                 <div class="item-count" id = "popup-item-quantity">${item.itemCount}</div>
-                                <button class="qty-btn" id="pop-up-btn-add">+</button>
+                                <button class="qty-btn" onclick="PopIncreaseItem(${itemID%index+1})" id="pop-up-btn-add">+</button>
                             </div>
                     </div>
                     <div class="price">${item.itemPrice}</div>
@@ -133,10 +162,8 @@ function writeCart()
 function openCart()
 {
     CartPopupArea.style.display = "flex";
-
-    FillItemData(item_list, itemID);
-    FillItemData(item_list, itemID+1);
-    FillItemData(item_list, itemID-1);
+    FillItemData(item_list, 1);
+    FillItemData(item_list, 2);
 }
 
 // closes cart

@@ -2,7 +2,6 @@
 const popup = document.getElementById("popupOverlay");
 const openBtn = document.getElementById("openSearchPopup");
 const searchImg = openBtn.querySelector("img");
-console.log("desktop img is: " + searchImg);
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -14,12 +13,8 @@ window.addEventListener("resize", (BurgerMenu));
 function BurgerMenu() {
     if (window.innerWidth <= window.innerHeight) {
         searchImg.src = "../../Images/Navbar/burger.png"; // ✅ actually change the image
-        console.log("search button img changed to: " + searchImg.src);
-        console.log("Now in mobile view");
     } else {
         searchImg.src = "../../Images/Navbar/Icon.png"; // ✅ optional: revert in desktop
-        console.log("search button img changed to: " + searchImg.src);
-        console.log("Now in desktop view");
     }
 }
 
