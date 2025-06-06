@@ -65,7 +65,6 @@ AddToCartBtn.addEventListener("click", function(event) {
 
 function DecreaseItem()
 {
-  console.log("item decreased");
   if(count > 1)
   {
     count--;

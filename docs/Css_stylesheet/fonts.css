@@ -131,14 +131,7 @@
 
 .confirm-text {
   text-decoration: none;
-  color: white;
-  font-family: Inter;
-  font-size: 2vmax;
-}
-
-.confirm-text:hover {
-  text-decoration: none;
-  color: black;
+  color: inherit;
   font-family: Inter;
   font-size: 2vmax;
 }
