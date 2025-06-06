@@ -25,6 +25,7 @@ ContShop.addEventListener("click", function() {
     window.location.href = "../Products_list/shop.html";
 });
 
+// decreaes item count from popup
 function PopDecreaseItem(index)
 {
     var item = GetItemData(index);
@@ -43,6 +44,7 @@ function PopDecreaseItem(index)
     console.log("popup item decreased, count is: " + count);
 }
 
+// increases item count from popup
 function PopIncreaseItem(index)
 {
     console.log("index is: " + index);
