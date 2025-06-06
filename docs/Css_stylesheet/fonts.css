@@ -136,6 +136,15 @@
   font-size: 2vmax;
 }
 
+.confirm-text:hover {
+  text-decoration: none;
+  color: black;
+  font-family: Inter;
+  font-size: 2vmax;
+}
+
+
+
 /* search results page */
 .search-result-count {
   font-family: Inter;
