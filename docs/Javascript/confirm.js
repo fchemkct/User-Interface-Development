@@ -20,7 +20,6 @@ function AddConfirmItems (ConfirmItems, itemIndex)
                 <p>${item.itemName}</p>
                 <p>${item.itemPrice}</p>
             </div>`;
-            console.log("filled");
     }
 
     // else appends item 
@@ -31,12 +30,10 @@ function AddConfirmItems (ConfirmItems, itemIndex)
                 <p>${item.itemName}</p>
                 <p>${item.itemPrice}</p>
             </div>`);
-            console.log("appended");
     }
 
     // adds up total price
     var getPrice = parseInt(item.itemPrice.slice(1));
-    console.log("price is: " + getPrice);
     var currentTotal = parseInt(ConfirmTotal1.innerHTML) || 0;
     ConfirmTotal1.innerHTML = currentTotal + getPrice;
     ConfirmTotal2.innerHTML = ConfirmTotal1.innerHTML;

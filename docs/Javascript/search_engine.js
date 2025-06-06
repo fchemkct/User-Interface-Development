@@ -11,12 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!search_input)
     {
-        console.log("no search input, returning");
         return;
     }
 
     const lowerQuery = search_input.toLowerCase();
-    console.log("filtered input is: " + lowerQuery);
 
     // find matches with input from database
     products.forEach(product => 

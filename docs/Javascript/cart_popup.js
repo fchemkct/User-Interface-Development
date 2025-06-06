@@ -30,7 +30,6 @@ function PopDecreaseItem(index)
 {
     var item = GetItemData(index);
     var count = item.itemCount
-    console.log("item count was: " + item.itemCount)
     count--;
     if(count < 1)
     {
@@ -41,20 +40,17 @@ function PopDecreaseItem(index)
     item.itemCount = count;
     localStorage.setItem(`item${index}`, JSON.stringify(item)); 
     document.getElementsByClassName("item-count")[index-1].innerHTML = item.itemCount;
-    console.log("popup item decreased, count is: " + count);
 }
 
 // increases item count from popup
 function PopIncreaseItem(index)
 {
-    console.log("index is: " + index);
     var item = GetItemData(index);
     var count = item.itemCount
     count++;
     item.itemCount = count;
     localStorage.setItem(`item${index}`, JSON.stringify(item)); 
     document.getElementsByClassName("item-count")[index-1].innerHTML = item.itemCount;
-    console.log("popup item increased, count is: " + count);
 }
 
 // gets item data from local storage

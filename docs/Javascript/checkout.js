@@ -37,7 +37,6 @@ function AddCheckoutItems (CheckoutItems, itemIndex)
                         </div>
                         <p>${item.itemPrice}</p>
                     </div>`;
-            console.log("filled");
     }
 
     // else appends item
@@ -51,7 +50,6 @@ function AddCheckoutItems (CheckoutItems, itemIndex)
                         </div>
                         <p>${item.itemPrice}</p>
                     </div>`);
-            console.log("appended");
     }
 }
 

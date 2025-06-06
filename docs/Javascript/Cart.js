@@ -35,7 +35,6 @@ function AddCartItems (CartItems, itemIndex)
                     </div>
                 </div>
                 <hr>`;
-            console.log("filled");
     }
 
     // else appends item
@@ -62,12 +61,10 @@ function AddCartItems (CartItems, itemIndex)
                     </div>
                 </div>
                 <hr>`);
-            console.log("appended");
     }
 
     // adds up total price
     var getPrice = parseInt(item.itemPrice.slice(1));
-    console.log("price is: " + getPrice);
     var currentTotal = parseInt(CartTotal.innerHTML) || 0;
     CartTotal.innerHTML = currentTotal + getPrice;
 
